@@ -77,7 +77,7 @@ public class Sandwich {
 ```
 If we have a class with multiple constructors, we need to explicitly mention `@Autowired` annotation to any one of the constructors for the container to create beans.
 
-# Setter/Field based injection
+# Setter based injection
 
 In setter-based injection, we can provide the required dependencies as field parameters to the class and values are set using the setter methods of the properties. We need to annotate the setter methods with `@Autowired`  annotation.
 
