@@ -1,12 +1,12 @@
 ---
-title: Why You should use Constructor Injection in Spring
-categories: [spring-boot]
-date: 2020-02-17 05:00:00 +1100
-modified: 2020-02-17 05:00:00 +1100
-author: default
-excerpt: 'Why You should use Constructor Injection in Spring'
+title: Why You should use Constructor Injection in Spring
+categories: [spring-boot]
+date: 2020-02-17 05:00:00 +1100
+modified: 2020-02-17 05:00:00 +1100
+author: vasudha
+excerpt: 'Why You should use Constructor Injection in Spring'
 image:
-  auto: 0058-motorway-junction
+  auto: 0058-motorway-junction
 ---
 
 Dependency injection is one of the common approaches to implement loose coupling among the classes in an application. It ensures that classes are independent and the required dependencies are provided by an external framework.
@@ -83,7 +83,7 @@ If we have a class with multiple constructors, we need to explicitly mention `@A
 
 # Setter based injection
 
-In setter-based injection, we can provide the required dependencies as field parameters to the class and values are set using the setter methods of the properties. We need to annotate the setter methods with `@Autowired` annotation.
+In setter-based injection, we can provide the required dependencies as field parameters to the class and values are set using the setter methods of the properties. We need to annotate the setter or getter methods with `@Autowired` annotation.
 
 For example, here the `Cake` class requires an object of `Topping` class. The `Topping` object is provided as an argument in the setter method of that property.
 
@@ -200,7 +200,7 @@ public class TestCookieClassSetterInjection {
 
 Here since the Cookie class has null value for `Topping` , the test case fails with a `NullPointerException`. We need to explicitly initialize the Topping object to test.
 
-Similarly in future if someone adds additional dependencies to this class, the unit test silently fails with a `NullPointerException`. It is very difficult to find the reason because the new dependencies is not within the visibility for Cake’s client classes.
+Similarly in future if someone adds additional dependencies to this class, the unit test silently fails with a `NullPointerException`. It is very difficult to find the reason because the new dependencies is not within the visibility for `Cookie`'s client classes.
 
 Let us consider the Cake class example created using constructor injection.
 

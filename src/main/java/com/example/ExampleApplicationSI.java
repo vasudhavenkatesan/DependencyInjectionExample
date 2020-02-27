@@ -6,17 +6,18 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.example.setterinjection.Cake;
+import com.example.setterinjection.Cookie;
 
-@SpringBootApplication(scanBasePackages= {"com.example.setterinjection","com.example.dependency"})
-public class ExampleApplicationSI  {
+@SpringBootApplication(scanBasePackages = { "com.example.setterinjection", "com.example.dependency" })
+public class ExampleApplicationSI {
 
-	private static Logger LOGGER=LoggerFactory.getLogger(ExampleApplicationSI.class);
+	private static Logger LOGGER = LoggerFactory.getLogger(ExampleApplicationSI.class);
+
 	public static void main(String[] args) {
-		
+
 		ApplicationContext context = SpringApplication.run(ExampleApplicationSI.class, args);
-		Cake obj = context.getBean(Cake.class);
-		LOGGER.info("Cake : "+ obj.toString());
+		Cookie obj = context.getBean(Cookie.class);
+		LOGGER.info("Cookie : " + obj.toString());
 	}
 
 }

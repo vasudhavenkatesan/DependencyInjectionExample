@@ -4,14 +4,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Flavor {
-	
-	String flavorType = " Chocolate ";
-	String color = " White ";
-	
+
+	String flavorType;
+//	= "Chocolate";
+	String color;
+//	= "White";
+
 	public String getFlavorType() {
 		return flavorType;
 	}
-	
+
 	public String getColor() {
 		return color;
 	}
@@ -20,6 +22,5 @@ public class Flavor {
 	public String toString() {
 		return "Flavor [flavorType=" + flavorType + ", color=" + color + "]";
 	}
-	
 
 }
