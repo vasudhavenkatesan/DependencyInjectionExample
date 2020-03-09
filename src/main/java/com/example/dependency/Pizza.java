@@ -9,11 +9,8 @@ public class Pizza {
 	@Autowired
 	Topping toppings;
 
-//	@Autowired
 	Pizza(Topping toppings) {
-		toppings.setToppingName("Gems");
 		this.toppings = toppings;
-//		System.out.println("Constructor - " + this.toppings);
 	}
 
 	@Autowired

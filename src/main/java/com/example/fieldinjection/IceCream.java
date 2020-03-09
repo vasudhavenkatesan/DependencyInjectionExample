@@ -11,12 +11,17 @@ public class IceCream {
 	@Autowired
 	Topping toppings;
 
-	Topping getToppings() {
+	public Topping getToppings() {
 		return toppings;
 	}
 
 	void setToppings(Topping toppings) {
 		this.toppings = toppings;
+	}
+
+	@Override
+	public String toString() {
+		return "IceCream [toppings=" + toppings + "]";
 	}
 
 }

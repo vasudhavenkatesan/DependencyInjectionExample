@@ -6,9 +6,7 @@ import org.springframework.stereotype.Component;
 public class Flavor {
 
 	String flavorType;
-//	= "Chocolate";
 	String color;
-//	= "White";
 
 	public String getFlavorType() {
 		return flavorType;
